@@ -78,7 +78,7 @@ with st.sidebar:
 url = st.text_input("URL", label_visibility="collapsed")
 
 repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
-llm = HuggingFaceEndpoint(repo_id=repo_id, max_length=150, temperature=0.7, token=hf_token)
+llm = HuggingFaceEndpoint(repo_id=repo_id, temperature=0.7, token=hf_token,max_new_tokens=150)
 
 prompt_template = """
 Provide summary of the following content in 300 words:
